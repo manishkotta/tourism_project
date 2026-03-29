@@ -9,7 +9,7 @@ repo_type = "dataset"
 # Initialize API client
 api = HfApi(token=os.getenv("HF_TOKEN"))
 
-# Step 1: Check if the dataset repository exists
+# Step 1: Check if the dataset repository exists and create it if it doesn't 
 try:
     api.repo_info(repo_id=repo_id, repo_type=repo_type)
     print(f"Dataset repository '{repo_id}' already exists. Using it.")
